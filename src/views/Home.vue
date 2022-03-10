@@ -57,15 +57,14 @@
   </div>
 </template>
 
+
 <script>
 import { mapGetters } from "vuex";
-import RwvTag from "@/components/VTag";
 import { FETCH_TAGS } from "@/store/actions.type";
 
 export default {
   name: "home",
   components: {
-    RwvTag
   },
   mounted() {
     this.$store.dispatch(FETCH_TAGS);

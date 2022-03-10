@@ -18,7 +18,8 @@ ApiService.init();
 router.beforeEach((to, from, next) =>
   Promise.all([store.dispatch(CHECK_AUTH)]).then(next)
 );
-createApp(App)
+
+const app = createApp(App)
     .use(router)
     .use(store)
     .mount('#app')
